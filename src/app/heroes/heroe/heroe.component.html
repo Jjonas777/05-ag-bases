@@ -1,0 +1,31 @@
+<h1>{{ nombre }}</h1>
+
+<dl>
+  <td>Nombre: </td>
+  <dd> {{ nombre }} </dd>
+
+  <td>Edad: </td>
+  <dd> {{ edad }} </dd>
+
+  <td>Método: </td>
+  <dd> {{ getDescripcion() }} </dd>
+
+  <td>Capitalizado: </td>
+  <dd> {{ nombreCapitalizado }} </dd>
+</dl>
+
+<button
+  *ngIf="nombre === 'Iroman'"
+  (click)="setCambiarNombre()"
+  class="btn btn-primary mx-2">
+  Cambiar Nombre
+</button>
+
+<button
+  *ngIf="edad === 45"
+  (click)="setCambiarEdad()"
+  class="btn btn-primary">
+  Cambiar Edad
+</button>
+
+<button (click)="setResetear()" class="btn btn-primary mx-2"> Resetear </button>

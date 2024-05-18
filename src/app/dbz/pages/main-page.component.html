@@ -1,0 +1,18 @@
+<h1>DBZ Personajes - Main Page</h1>
+<hr>
+
+<div class="row">
+  <div class="col"> <!--Contiene el Listado-->
+
+    <app-dbz-lista [personajeLista]="personajes"
+                   (enEliminarPersonajeById)="enEliminarPersonaje($event)">
+    </app-dbz-lista>
+
+  </div>
+
+  <div class="col"> <!--Contiene el formulario-->
+
+    <app-dbz-add-personaje (enNuevoPersonaje)="enNuevoPersonaje($event)"></app-dbz-add-personaje>
+
+  </div>
+</div>
